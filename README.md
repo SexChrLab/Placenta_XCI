@@ -117,7 +117,7 @@ Understanding patterns of X chromosome inactivation in full term human placenta
   
 ##### Assign escape status by combining all of the gtex samples
 1. Find genes that have at least one heterozygous and expressed variant across all skewed samples
-  1. `python /scratch/tphung3/Placenta_XCI/gene_level/gtex_counts/scripts/find_expressed_genes.py` produces the output file `/scratch/tphung3/Placenta_XCI/gene_level/gtex_counts/expressed_genes_all_samples.txt` that lists all of the genes with at least one heterozygous and expressed variant across all samples. There are 690 genes.
+  1. `python /scratch/tphung3/Placenta_XCI/gene_level/gtex_counts/scripts/find_expressed_genes.py` produces the output file `/scratch/tphung3/Placenta_XCI/gene_level/gtex_counts/expressed_genes_all_samples.txt` that lists all of the genes with at least one heterozygous and expressed variant across all samples. There are 689 genes.
 2. For each skewed individual in gtex, compute mean allele balance for each gene. For the placenta and decidua sample, I have already done this step here `/scratch/tphung3/Placenta_XCI/gene_level/wes_genotyping/asereadcounter_geneinfo/chrX`.
   - Use the Python script `compute_allele_balance_per_gene.py`
   - See snakemake rule `compute_allele_balance_per_gene_gtex`
@@ -126,6 +126,7 @@ Understanding patterns of X chromosome inactivation in full term human placenta
 5. See snakemake rule `plot_per_gene_allele_balance_compare_gtex_placenta_decidua`
 6. Categorize genes into inactivated, escape, or variable escape for gtex, placenta, decidua females, and decidua males.
   1. Use Python script `categorize_genes.py`
+    - This script categorizes the genes, remove NA, and also sort for plotting heatmaps
 
 ### Generate plots for manuscript
 - Directory `manuscript_plots`
