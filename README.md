@@ -96,6 +96,18 @@ Understanding patterns of X chromosome inactivation in full term human placenta
     - Sub-directories: `gtex_counts` and `specific_gene_analysis`
 
 #### wes_genotyping
+- Process the placenta skewed samples
+2. Convert skewed samples to bed file format
+  - Use the python script `convert_asereadcounter_to_bed.py`
+  - See the snakemake rule `convert_asereadcounter_to_bed_placenta`
+3. Convert `gtf` file to bed file format
+  ```
+  python convert_gtf_to_bed.py
+  ```
+  - Output is `/scratch/tphung3/Placenta_XCI/gene_level/wes_genotyping/gtf_bed/gencode.v29.annotation.chrX.bed`
+4. Use bedtools to find where on the genes the variants are
+  1. Snakemake rule `bedtools_intersect`
+  2. Remove duplicated: snakemake rule `find_unique_lines_after_bedtools`
 
 #### gtex_counts
 1. Find samples that are skewed in GTEX tissues, placenta, decidua females, and decidua males
