@@ -132,3 +132,21 @@ Understanding patterns of X chromosome inactivation in full term human placenta
 - Directory `manuscript_plots`
 - Figure 2: `scripts/figure_2.R`
 - Figure 3B: `scripts/figure_3B.R`
+
+- Supplementary figures:
+    - Figure S3: `scripts/figure_s3_pca.R`
+    - Figure S5: `./scripts/run_figure_s5_determine_threshold.sh`
+    - Figure S6: `./scripts/figure_s6_nonPAR_males.R`
+    - Figure S7: `./scripts/figure_s7_xci_entire_X.R`
+    - Figure S9:
+        + Directory: `/scratch/tphung3/Placenta_XCI/gene_level/gtex_counts/`
+        + `python scripts/compute_escaping_samples_prop_per_gene.py chrX_escaping_samples_prop_per_gene.tsv`
+        + Run R script `/scratch/tphung3/Placenta_XCI/manuscript_plots/scripts/figure_s9_chrX_escaping_samples_prop_per_gene.R`
+    - Figure S10:
+        + Directory: `/scratch/tphung3/Placenta_XCI/gene_level/gtex_counts/`
+        + `python scripts/generate_data_for_gene_heatmap.py`
+        + Run R script `/scratch/tphung3/Placenta_XCI/manuscript_plots/scripts/figure_s10.R`
+    - Figure S11:
+        + Directory: `/scratch/tphung3/Placenta_XCI/gene_level/female_male_log2ratio/`
+        + `python find_log2ratio_genes.py`
+        + Run R script `scripts/figure_s11_log2ratio.R`
