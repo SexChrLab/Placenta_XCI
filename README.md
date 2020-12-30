@@ -51,7 +51,7 @@ Understanding patterns of X chromosome inactivation in full term human placenta
 ### Processing GTEx data
 - Directory `gtex`
 - In this directory, we are analyzing the ASEReadCounter counts from GTEx version 8.
-## 01_download_data
+#### 01_download_data
 1. Download the file `participant.tsv` from anvil project website. This file has information about the sample id
 2. Download the file `sample.tsv` from anvil project website. This file has information about the rna id and which tissue
 3. Obtain a list of individuals
@@ -66,7 +66,7 @@ Understanding patterns of X chromosome inactivation in full term human placenta
   2. Only keep the females
     1. Download: `wget https://storage.googleapis.com/gtex_analysis_v8/annotations/GTEx_Analysis_v8_Annotations_SubjectPhenotypesDS.txt`
 
-## 02_analyze_gtex_counts
+#### 02_analyze_gtex_counts
 - Snakemake file: `analyze_gtex_counts.snakefile`
 1. Subset each downloaded count file for each tissue
   - Because each count file includes all of the tissues for an individual, I need to subset for each tissue
