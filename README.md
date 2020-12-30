@@ -143,13 +143,16 @@ Understanding patterns of X chromosome inactivation in full term human placenta
 ### Generate plots for manuscript
 - Directory `manuscript_plots`
 - Figure 2: `scripts/figure_2.R`
-- Figure 3B: `scripts/figure_3B.R`
+- Figure 2C: `scripts/figure_2C.R`
+- Figure 3: `scripts/figure_3.R`
+- Figure 4: `scripts/figure_4.R`
 
 - Supplementary figures:
     - Figure S3: `scripts/figure_s3_pca.R`
     - Figure S5: `./scripts/run_figure_s5_determine_threshold.sh`
     - Figure S6: `./scripts/figure_s6_nonPAR_males.R`
     - Figure S7: `./scripts/figure_s7_xci_entire_X.R`
+    - Figure S8: `scripts/figure_s8.R`
     - Figure S9:
         + Directory: `/scratch/tphung3/Placenta_XCI/gene_level/gtex_counts/`
         + `python scripts/compute_escaping_samples_prop_per_gene.py chrX_escaping_samples_prop_per_gene.tsv`
