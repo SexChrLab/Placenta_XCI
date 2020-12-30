@@ -79,13 +79,13 @@ Understanding patterns of X chromosome inactivation in full term human placenta
 
 ### Processing GTEx heart data
 - Directory `heart`
-## 1. Find subject ids with rnaseq data for both heart left ventricle and heart atrial appendage
+#### 1. Find subject ids with rnaseq data for both heart left ventricle and heart atrial appendage
 - `python find_samples_with_2_hearts.py`
 
-## 2. Calculate the proportion of skewed variants per sample
+#### 2. Calculate the proportion of skewed variants per sample
 - `python calc_prop_variants_skewed_per_sample.py`
 
-## 3. Employ a phasing strategy for heart in the same way as placenta
+#### 3. Employ a phasing strategy for heart in the same way as placenta
 1. `python /scratch/tphung3/Placenta_XCI/heart/subset_paired_hearts_for_shared_variants.py chrX`. Results are in directory `paired_hearts_shared_variants/`
 2. Use the snakemake file `phase.snakefile`. Results are in directory `phased_allele_balance/`
 - `cat *chrX* | grep -v sample_id | awk '{print$1"\t"$3"\t"$2}' | sort -n -r -k 3,3 > all_heart_chrX_phased_allele_balance.tsv`
