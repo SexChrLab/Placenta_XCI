@@ -3,6 +3,9 @@ Understanding patterns of X chromosome inactivation in full term human placenta
 
 ### Processing placenta data
 - Directory `placenta`
+#### 00_sexcheck
+- Snakefile `sexcheck.snakefile`
+
 #### 01_process_dna
 - Generate config files
     - `python generate_json_config_dna_females.py`: take in the input file `female_sample_ids.csv` and output the config file `process_dna_females_config.json` (for female placentas)
@@ -148,6 +151,7 @@ Understanding patterns of X chromosome inactivation in full term human placenta
 - Figure 4: `scripts/figure_4.R`
 
 - Supplementary figures:
+    - Figure S2: `scripts/figure_s2.R`
     - Figure S3: `scripts/figure_s3_pca.R`
     - Figure S5: `./scripts/run_figure_s5_determine_threshold.sh`
     - Figure S6: `./scripts/figure_s6_nonPAR_males.R`

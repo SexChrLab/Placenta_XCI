@@ -1,0 +1,13 @@
+Sample,Number of called variants (AC > 0),Number of heterozygous variants (AC = 1),Number of heterozygous & expressed variants in site A,Number of heterozygous & expressed variant in site B
+OBG0112,"1,479",213,27,32
+OBG0116,"2,018",174,18,18
+OBG0117,"1,343",149,31,27
+OBG0118,"1,484",180,24,25
+OBG0122,"1,413",126,15,11
+OBG0123,"1,762",149,22,23
+OBG0126,"1,898",171,20,20
+OBG0130,"1,566",197,23,28
+OBG0132,"1,946",182,20,18
+OBG0158,"1,620",223,28,27
+YPOPS0006,"1,510",180,26,27
+OBG0053,"1,532",172,23,30
